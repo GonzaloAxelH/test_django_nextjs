@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "deploy_w": "pnpm run build && rd -r output static && next export -o output && robocopy output static && python integration_script.py -d static",
