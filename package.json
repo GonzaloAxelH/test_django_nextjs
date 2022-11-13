@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy_w": "pnpm run build && rd -r output static && next export -o output && robocopy output static && python integration_script.py -d static",
+    "deploy_l": "pnpm run build && rm -rf output static && next export -o output &&  mv output static && python integration_script.py -d static"
+    
+    
   },
   "dependencies": {
     "@types/node": "18.11.9",
