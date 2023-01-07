@@ -9,10 +9,11 @@
     "lint": "next lint",
     "deploy_w": "pnpm run build && rd -r output static && next export -o output && robocopy output static && python integration_script.py -d static",
     "deploy_l": "pnpm run build && rm -rf output static && next export -o output &&  mv output static && python integration_script.py -d static"
-    
-    
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@heroicons/react": "^2.0.13",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
@@ -20,5 +21,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
   }
 }
